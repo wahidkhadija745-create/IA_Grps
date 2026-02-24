@@ -23,7 +23,7 @@ Une connexion internet est requise lors du chargement de la page pour téléchar
 INSTALLATION :
 --------------
 Aucune installation complexe n'est requise.
-1. Téléchargez simplement le fichier "Analyse_Statistique_CSV_Pro.html".
+1. Téléchargez simplement le fichier "[B_M].html".
 2. Double-cliquez sur le fichier pour l'ouvrir dans votre navigateur par défaut.
 
 UTILISATION :
