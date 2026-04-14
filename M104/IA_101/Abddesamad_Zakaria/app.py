@@ -1,50 +1,60 @@
-from flask import Flask, render_template, request
+import dash
+from dash import dcc, html
+import dash_bootstrap_components as dbc
 import pandas as pd
-import os
+import plotly.express as px
 
-app = Flask(__name__)
-CSV_FILE = 'StudentsPerformance.csv'
+# --- 1. DATA PROCESSING ---
+try:
+    df = pd.read_csv("Personal_Finance_Dataset.csv")
+    df.columns = df.columns.str.strip()
+    df['Date'] = pd.to_datetime(df['Date'])
+    print("✅ Success: Triple Visuals Loaded!")
+except Exception as e:
+    print(f"❌ Error: {e}")
 
-@app.route('/', methods=['GET', 'POST'])
-def index():
-    # 1. Load your actual CSV data
-    if os.path.exists(CSV_FILE):
-        df = pd.read_csv(CSV_FILE)
-    else:
-        # Create dummy data if file is missing so the app doesn't crash
-        df = pd.DataFrame(columns=['math score', 'reading score', 'writing score'])
+# --- 2. THE APP ---
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.CYBORG])
 
-    # 2. Get the very last row for the graph
-    if not df.empty:
-        last_row = df.iloc[-1]
-        # We use .get() in case the columns have slightly different names
-        current_data = {
-            'math': int(last_row.get('math score', 0)),
-            'reading': int(last_row.get('reading score', 0)),
-            'writing': int(last_row.get('writing score', 0))
-        }
-    else:
-        current_data = {'math': 0, 'reading': 0, 'writing': 0}
-
-    if request.method == 'POST':
-        # 3. Handle New Entry
-        new_entry = {
-            'math score': int(request.form.get('math', 0)),
-            'reading score': int(request.form.get('reading', 0)),
-            'writing score': int(request.form.get('writing', 0))
-        }
-        # Append to the dataframe and save back to CSV
-        df = pd.concat([df, pd.DataFrame([new_entry])], ignore_index=True)
-        df.to_csv(CSV_FILE, index=False)
+app.layout = dbc.Container([
+    # HEADER
+    html.H1("ABDO ET ZAKI PISTON - Analytics", className="text-warning text-center my-4"),
+    
+    # ROW 1: HISTOGRAM (Distribution)
+    dbc.Row([
+        dbc.Col([
+            html.H4("1. Transaction Distribution", className="text-info text-center"),
+            dcc.Graph(
+                figure=px.histogram(df, x="Amount", color="Type", nbins=10,
+                                   title="How often do I spend X amount?",
+                                   template="plotly_dark", barmode="overlay")
+            )
+        ], width=12),
+    ], className="mb-4"),
+    
+    # ROW 2: SCATTER & BOX PLOT
+    dbc.Row([
+        # 2. SCATTER PLOT (Spending over time)
+        dbc.Col([
+            html.H4("2. Spending Timeline", className="text-info text-center"),
+            dcc.Graph(
+                figure=px.scatter(df, x="Date", y="Amount", color="Category", size="Amount",
+                                 title="Individual Purchases over Time",
+                                 template="plotly_dark")
+            )
+        ], width=6),
         
-        current_data = {'math': new_entry['math score'], 
-                        'reading': new_entry['reading score'], 
-                        'writing': new_entry['writing score']}
-
-    # Prepare history for the table (last 10 rows)
-    history = df.tail(10).to_dict(orient='records')
-
-    return render_template('index.html', data=current_data, history=history)
+        # 3. BOX PLOT (Statistical Spread)
+        dbc.Col([
+            html.H4("3. Category Spread", className="text-info text-center"),
+            dcc.Graph(
+                figure=px.box(df[df['Type']=='Expense'], x="Category", y="Amount", color="Category",
+                             title="Range of Spending per Category",
+                             template="plotly_dark")
+            )
+        ], width=6),
+    ])
+], fluid=True)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=8055)
