@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mouhcine & Brahim Intelligence | AI Solutions Studio</title>
+  <meta name="description" content="Mouhcine & Brahim Intelligence — A premium AI solutions studio specializing in intelligent chatbots, data-driven applications, and modern digital experiences." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════ NAVBAR ═══════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="13" stroke="url(#lg1)" stroke-width="2"/><circle cx="14" cy="14" r="5" fill="url(#lg2)"/><line x1="14" y1="1" x2="14" y2="7" stroke="url(#lg1)" stroke-width="2" stroke-linecap="round"/><line x1="14" y1="21" x2="14" y2="27" stroke="url(#lg1)" stroke-width="2" stroke-linecap="round"/><line x1="1" y1="14" x2="7" y2="14" stroke="url(#lg1)" stroke-width="2" stroke-linecap="round"/><line x1="21" y1="14" x2="27" y2="14" stroke="url(#lg1)" stroke-width="2" stroke-linecap="round"/><defs><linearGradient id="lg1" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse"><stop stop-color="#3B82F6"/><stop offset="1" stop-color="#7C3AED"/></linearGradient><linearGradient id="lg2" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse"><stop stop-color="#3B82F6"/><stop offset="1" stop-color="#7C3AED"/></linearGradient></defs></svg>
+        </span>
+        <span class="logo-text">MBI</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#project" class="nav-link">Project</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#vision" class="nav-link">Vision</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="toggle-icon sun">☀️</span>
+          <span class="toggle-icon moon">🌙</span>
+          <div class="toggle-slider"></div>
+        </button>
+        <a href="#contact" class="nav-cta">Get in Touch</a>
+        <button class="burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero" id="home">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-glow glow-1"></div>
+    <div class="hero-glow glow-2"></div>
+    <div class="hero-glow glow-3"></div>
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <span class="badge-dot"></span>
+        AI Intelligence Studio · Est. 2025
+      </div>
+      <h1 class="hero-title reveal-up">
+        <span class="title-line">Mouhcine &amp;</span>
+        <span class="title-line gradient-text">Brahim Intelligence</span>
+      </h1>
+      <p class="hero-tagline reveal-up">Where smart technology meets premium design</p>
+      <p class="hero-sub reveal-up">
+        We build intelligent systems, data-driven chatbots, and modern digital experiences — 
+        blending deep technical expertise with a relentless focus on quality.
+      </p>
+      <div class="hero-actions reveal-up">
+        <a href="#project" class="btn btn-primary">
+          <span>Explore Our Project</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-secondary">Contact Us</a>
+      </div>
+      <div class="hero-stats reveal-up">
+        <div class="stat-item">
+          <span class="stat-num" data-target="1">0</span>
+          <span class="stat-label">AI Project Live</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="100">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label">Custom Data</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="2">0</span>
+          <span class="stat-label">Creators</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card-float">
+        <div class="float-card card-1">
+          <div class="fc-icon">🧠</div>
+          <div class="fc-text"><strong>AI Chatbot</strong><br/><small>Powered by our data</small></div>
+        </div>
+        <div class="float-card card-2">
+          <div class="fc-icon">📊</div>
+          <div class="fc-text"><strong>Custom Dataset</strong><br/><small>Train.zip · Notebook ready</small></div>
+        </div>
+        <div class="float-card card-3">
+          <div class="fc-icon">⚡</div>
+          <div class="fc-text"><strong>Google Colab</strong><br/><small>Deployed &amp; tested</small></div>
+        </div>
+        <div class="orbit-ring ring-1"></div>
+        <div class="orbit-ring ring-2"></div>
+        <div class="orbit-dot dot-1"></div>
+        <div class="orbit-dot dot-2"></div>
+        <div class="orbit-dot dot-3"></div>
+        <div class="central-orb">
+          <div class="orb-inner">MBI</div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ ABOUT ═══════════════ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">About Us</span>
+        <h2 class="section-title">Two builders.<br/>One intelligent vision.</h2>
+        <p class="section-sub">We are Mouhcine and Brahim — developers, creators, and problem-solvers obsessed with building systems that think.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-card reveal-left">
+          <div class="about-avatar avatar-m">
+            <span>M</span>
+            <div class="avatar-ring"></div>
+          </div>
+          <h3>Mouhcine</h3>
+          <p>Full-stack developer and AI enthusiast with a deep passion for data science, intelligent automation, and crafting premium digital experiences. Drives the technical architecture and AI model design behind every project.</p>
+          <div class="about-tags">
+            <span>AI & ML</span><span>Data Science</span><span>Full-Stack</span>
+          </div>
+        </div>
+        <div class="about-center-block reveal-up">
+          <div class="partnership-badge">
+            <div class="pb-inner">
+              <div class="pb-icon">🤝</div>
+              <p>Together, we combine intelligence and design into real, working products — not concepts, not mockups. <strong>Real systems. Real data. Real results.</strong></p>
+            </div>
+          </div>
+          <div class="milestones">
+            <div class="milestone">
+              <div class="ms-dot"></div>
+              <div><strong>Chatbot Trained</strong><p>On our own custom dataset in Google Colab</p></div>
+            </div>
+            <div class="milestone">
+              <div class="ms-dot"></div>
+              <div><strong>Notebook Ready</strong><p>Full .ipynb available in the project folder</p></div>
+            </div>
+            <div class="milestone">
+              <div class="ms-dot"></div>
+              <div><strong>Data Collected</strong><p>Custom train.zip dataset powering the model</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="about-card reveal-right">
+          <div class="about-avatar avatar-b">
+            <span>B</span>
+            <div class="avatar-ring"></div>
+          </div>
+          <h3>Brahim</h3>
+          <p>Creative developer and digital strategist with an eye for premium design and user experience. Brings the vision, the UI precision, and the entrepreneurial mindset to every intelligent project we build.</p>
+          <div class="about-tags">
+            <span>UI/UX</span><span>Web Dev</span><span>Strategy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PROJECT ═══════════════ -->
+  <section class="project section" id="project">
+    <div class="project-bg-glow"></div>
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Featured Project</span>
+        <h2 class="section-title">Our AI Chatbot —<br/><span class="gradient-text">Already Built. Already Live.</span></h2>
+        <p class="section-sub">Not a concept. Not a wireframe. A fully programmed, data-powered AI chatbot developed in Google Colab with our own custom dataset.</p>
+      </div>
+      <div class="project-showcase">
+        <div class="project-visual reveal-left">
+          <div class="project-window">
+            <div class="window-bar">
+              <span class="wb-dot red"></span>
+              <span class="wb-dot yellow"></span>
+              <span class="wb-dot green"></span>
+              <span class="wb-title">MBI Chatbot · NYC Taxi Dataset · GPT-4.1-nano</span>
+            </div>
+            <div class="chat-ui">
+              <div class="chat-msg bot">
+                <div class="chat-avatar">🤖</div>
+                <div class="chat-bubble">Bonjour ! Je suis le <strong>MBI Chatbot</strong>. Je réponds en français sur le dataset NYC Taxi 2016 — 1,4M de trajets analysés. Comment puis-je vous aider ?</div>
+              </div>
+              <div class="chat-msg user">
+                <div class="chat-bubble">Quelle est la durée moyenne des trajets ?</div>
+                <div class="chat-avatar">👤</div>
+              </div>
+              <div class="chat-msg bot">
+                <div class="chat-avatar">🤖</div>
+                <div class="chat-bubble">La durée moyenne globale est d'environ <strong>11,4 minutes</strong>. Aux heures de pointe du soir (17h-19h), elle monte à <strong>14,2 minutes</strong> — soit 25% de plus qu'à la normale.</div>
+              </div>
+              <div class="chat-msg user">
+                <div class="chat-bubble">Et les zones les plus congestionnées ?</div>
+                <div class="chat-avatar">👤</div>
+              </div>
+              <div class="chat-msg bot typing" id="demoTyping">
+                <div class="chat-avatar">🤖</div>
+                <div class="chat-bubble">
+                  <span class="typing-dot"></span>
+                  <span class="typing-dot"></span>
+                  <span class="typing-dot"></span>
+                </div>
+              </div>
+            </div>
+            <div class="chat-input-bar">
+              <input type="text" placeholder="Posez votre question sur le dataset NYC Taxi…" readonly />
+              <a href="chatbot.html" class="send-btn" style="text-decoration:none;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-file-badges">
+            <div class="file-badge">
+              <span class="fb-icon">📓</span>
+              <div><strong>projectmath.ipynb</strong><small>Google Colab Notebook</small></div>
+            </div>
+            <div class="file-badge">
+              <span class="fb-icon">🗜️</span>
+              <div><strong>train.zip</strong><small>NYC Taxi Dataset · 1,4M trajets</small></div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info reveal-right">
+          <div class="project-label">
+            <span class="status-dot"></span> Operational
+          </div>
+          <h3>MBI Intelligent Chatbot</h3>
+          <p>A fully functional AI chatbot developed from scratch using Python and machine learning techniques, trained entirely on our own collected and curated dataset. This is a real, working implementation — not a prototype.</p>
+          <div class="feature-grid">
+            <div class="feature-item">
+              <div class="fi-icon">📂</div>
+              <div><strong>Data-Based Answers</strong><p>Responses grounded in our custom dataset — precise and domain-specific.</p></div>
+            </div>
+            <div class="feature-item">
+              <div class="fi-icon">💬</div>
+              <div><strong>Smart Interaction</strong><p>Natural language understanding with clean conversational logic.</p></div>
+            </div>
+            <div class="feature-item">
+              <div class="fi-icon">🧩</div>
+              <div><strong>Clean Architecture</strong><p>Well-structured notebook with modular, readable, documented code.</p></div>
+            </div>
+            <div class="feature-item">
+              <div class="fi-icon">📈</div>
+              <div><strong>Scalable Concept</strong><p>Built to expand — new data, new domains, new capabilities on demand.</p></div>
+            </div>
+            <div class="feature-item">
+              <div class="fi-icon">🎨</div>
+              <div><strong>Modern UX Thinking</strong><p>Designed with end-user interaction quality in mind from day one.</p></div>
+            </div>
+            <div class="feature-item">
+              <div class="fi-icon">⚗️</div>
+              <div><strong>Google Colab Native</strong><p>Runs directly in Colab — shareable, reproducible, and cloud-ready.</p></div>
+            </div>
+          </div>
+          <a href="projectmath.ipynb" class="btn btn-primary" download>
+            <span>View Notebook</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1v9M4 7l4 4 4-4M2 13h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SERVICES ═══════════════ -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Services</span>
+        <h2 class="section-title">What we build</h2>
+        <p class="section-sub">From intelligent chatbots to data-driven platforms — every service is crafted with precision, purpose, and premium quality.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal-up" style="--delay:0s">
+          <div class="sc-glow"></div>
+          <div class="sc-icon">🤖</div>
+          <h3>AI Chatbot Development</h3>
+          <p>Custom intelligent chatbots built on your data. We design, train, and deploy conversational AI that actually understands your domain — not just generic responses.</p>
+          <div class="sc-tags"><span>NLP</span><span>ML</span><span>Python</span></div>
+          <div class="sc-arrow">→</div>
+        </div>
+        <div class="service-card reveal-up" style="--delay:0.1s">
+          <div class="sc-glow"></div>
+          <div class="sc-icon">🌐</div>
+          <h3>Intelligent Web Experiences</h3>
+          <p>Modern, animated, and highly interactive websites that go beyond static pages — infused with smart features, smooth motion, and premium aesthetics.</p>
+          <div class="sc-tags"><span>React</span><span>HTML/CSS</span><span>JS</span></div>
+          <div class="sc-arrow">→</div>
+        </div>
+        <div class="service-card reveal-up" style="--delay:0.2s">
+          <div class="sc-glow"></div>
+          <div class="sc-icon">📊</div>
+          <h3>Data-Driven Solutions</h3>
+          <p>From raw datasets to actionable insights. We process, analyze, and visualize data to build systems that inform, predict, and optimize.</p>
+          <div class="sc-tags"><span>Pandas</span><span>NumPy</span><span>Visualization</span></div>
+          <div class="sc-arrow">→</div>
+        </div>
+        <div class="service-card reveal-up" style="--delay:0.3s">
+          <div class="sc-glow"></div>
+          <div class="sc-icon">⚙️</div>
+          <h3>Automation & Smart Tools</h3>
+          <p>Intelligent automation flows that save time, eliminate repetition, and create value — from script automation to full AI-powered workflows.</p>
+          <div class="sc-tags"><span>Automation</span><span>APIs</span><span>Colab</span></div>
+          <div class="sc-arrow">→</div>
+        </div>
+        <div class="service-card reveal-up" style="--delay:0.4s">
+          <div class="sc-glow"></div>
+          <div class="sc-icon">🛠️</div>
+          <h3>Custom Digital Projects</h3>
+          <p>Have a unique vision? We build tailor-made digital solutions — from concept to deployment — with full attention to quality, performance, and design.</p>
+          <div class="sc-tags"><span>Custom</span><span>End-to-End</span><span>Premium</span></div>
+          <div class="sc-arrow">→</div>
+        </div>
+        <div class="service-card service-cta-card reveal-up" style="--delay:0.5s">
+          <div class="sc-glow"></div>
+          <div class="cta-inner">
+            <h3>Ready to build something intelligent?</h3>
+            <p>Let's talk about your next project.</p>
+            <a href="#contact" class="btn btn-primary">Start a Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ WHY US ═══════════════ -->
+  <section class="why section" id="why">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Why Choose Us</span>
+        <h2 class="section-title">Built different.<br/>Designed to impress.</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal-up" style="--delay:0s">
+          <div class="wc-num">01</div>
+          <h3>Technical Depth</h3>
+          <p>We don't just write code. We design intelligent systems from the ground up — with a deep understanding of data science, machine learning, and software architecture.</p>
+        </div>
+        <div class="why-card reveal-up" style="--delay:0.1s">
+          <div class="wc-num">02</div>
+          <h3>Design Excellence</h3>
+          <p>Every pixel matters. We pair technical power with obsessive attention to design quality — creating experiences that are as beautiful as they are functional.</p>
+        </div>
+        <div class="why-card reveal-up" style="--delay:0.2s">
+          <div class="wc-num">03</div>
+          <h3>Real Implementations</h3>
+          <p>We ship real products. Our chatbot isn't a concept — it's fully programmed, trained on actual data, and ready to demonstrate. Real results, every time.</p>
+        </div>
+        <div class="why-card reveal-up" style="--delay:0.3s">
+          <div class="wc-num">04</div>
+          <h3>Innovation Mindset</h3>
+          <p>We constantly explore new tools, frameworks, and methodologies to stay ahead. If it's cutting-edge, we're already experimenting with it.</p>
+        </div>
+        <div class="why-card reveal-up" style="--delay:0.4s">
+          <div class="wc-num">05</div>
+          <h3>User-First Quality</h3>
+          <p>Every solution is built with the end user in mind — intuitive, responsive, and delightful. Good UX is never an afterthought in our workflow.</p>
+        </div>
+        <div class="why-card reveal-up" style="--delay:0.5s">
+          <div class="wc-num">06</div>
+          <h3>Collaborative Spirit</h3>
+          <p>We work together — and with our partners — with full transparency, clear communication, and a shared commitment to delivering exceptional outcomes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ VISION ═══════════════ -->
+  <section class="vision section" id="vision">
+    <div class="vision-bg"></div>
+    <div class="vision-glow"></div>
+    <div class="container">
+      <div class="vision-content reveal-up">
+        <span class="section-tag light">Our Vision</span>
+        <h2 class="section-title light">Building the intelligence<br/><span class="gradient-text-vision">of tomorrow, today.</span></h2>
+        <p class="section-sub light">We believe intelligent technology should be accessible, powerful, and beautifully designed. Our mission is to create AI-powered solutions that redefine what's possible — starting with our chatbot, and expanding into a full ecosystem of intelligent tools.</p>
+        <div class="vision-pillars">
+          <div class="vp-item">
+            <div class="vp-icon">🚀</div>
+            <h4>Scale Intelligence</h4>
+            <p>Expand our chatbot into a multi-domain AI platform capable of handling complex real-world queries.</p>
+          </div>
+          <div class="vp-item">
+            <div class="vp-icon">🌍</div>
+            <h4>Global Reach</h4>
+            <p>Build solutions used and trusted by teams, companies, and individuals across the world.</p>
+          </div>
+          <div class="vp-item">
+            <div class="vp-icon">💡</div>
+            <h4>Continuous Innovation</h4>
+            <p>Stay at the frontier of AI research and translate it into practical, deployable products.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONTACT ═══════════════ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Contact</span>
+        <h2 class="section-title">Let's build something<br/><span class="gradient-text">remarkable together.</span></h2>
+        <p class="section-sub">Have a project in mind? Want to collaborate or learn more about our work? We'd love to hear from you.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <div class="ci-item">
+            <div class="ci-icon">📧</div>
+            <div><strong>Email</strong><p>mouhcine.brahim@mbi.ai</p></div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon">🌍</div>
+            <div><strong>Location</strong><p>Morocco · Available Worldwide</p></div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon">💼</div>
+            <div><strong>Focus</strong><p>AI, Chatbots, Data-Driven Solutions</p></div>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form reveal-right" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Full Name</label>
+              <input type="text" id="fname" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="femail">Email</label>
+              <input type="email" id="femail" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fsubject">Subject</label>
+            <input type="text" id="fsubject" placeholder="What's this about?" />
+          </div>
+          <div class="form-group">
+            <label for="fmessage">Message</label>
+            <textarea id="fmessage" rows="5" placeholder="Tell us about your project or idea…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary full-width">
+            <span>Send Message</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="form-success" id="formSuccess">
+            ✅ Message sent! We'll be in touch soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-text large">MBI</span>
+          <p>Mouhcine &amp; Brahim Intelligence<br/>Building the future, one intelligent system at a time.</p>
+        </div>
+        <div class="footer-links">
+          <div class="fl-col">
+            <h4>Navigation</h4>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#project">Project</a>
+            <a href="#services">Services</a>
+          </div>
+          <div class="fl-col">
+            <h4>Project</h4>
+            <a href="projectmath.ipynb" download>Notebook (.ipynb)</a>
+            <a href="#project">Chatbot Demo</a>
+            <a href="#vision">Our Vision</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Mouhcine &amp; Brahim Intelligence. All rights reserved.</p>
+        <p>Built with precision · Powered by data · Designed with purpose</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
